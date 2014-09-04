@@ -1,6 +1,6 @@
 /**
- * Torii version: 0.1.4a
- * Built: Wed Sep 03 2014 12:35:29 GMT-0400 (EDT)
+ * Torii version: 0.1.4b
+ * Built: Thu Sep 04 2014 09:55:56 GMT-0400 (EDT)
  */
 define("torii/adapters/application", 
   ["exports"],
@@ -783,7 +783,7 @@ define("torii/providers/google-oauth2",
 
       // additional params that this provider requires
       requiredUrlParams: ['state'],
-      optionalUrlParams: ['scope', 'request_visible_actions'],
+      optionalUrlParams: ['request_visible_actions'],
 
       request_visible_actions: configurable('requestVisibleActions', ''),
 
