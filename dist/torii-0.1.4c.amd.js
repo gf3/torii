@@ -1,6 +1,6 @@
 /**
- * Torii version: 0.1.4b
- * Built: Thu Sep 04 2014 09:55:56 GMT-0400 (EDT)
+ * Torii version: 0.1.4c
+ * Built: Fri Sep 12 2014 14:23:16 GMT-0400 (EDT)
  */
 define("torii/adapters/application", 
   ["exports"],
@@ -982,14 +982,14 @@ define("torii/redirect-handler",
       run: function(){
         var url = this.url;
         return new Ember.RSVP.Promise(function(resolve, reject){
-          if (!window.opener) {
-            reject('No window.opener');
-          } else {
+          if (window.opener && window.name === 'torii-auth') {
             var data = "__torii_message:"+url;
             window.opener.postMessage(data, '*');
             // TODO listen for a message from the parent allowing
             // this promise to continue. As written, the popup will
             // hang until the parent window closes it.
+          } else {
+            reject('No window.opener');
           }
         });
       }
