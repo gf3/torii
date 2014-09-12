@@ -274,6 +274,7 @@ onto all providers.
 
 Torii comes with several providers already included:
 
+  * Github OAuth2 ([Dev Site](https://github.com/settings/applications) | [Docs](https://developer.github.com/v3/oauth/))
   * LinkedIn OAuth2 ([Dev Site](https://www.linkedin.com/secure/developer) | [Docs](http://developer.linkedin.com/))
   * Google OAuth2 ([Dev Site](https://console.developers.google.com/project) | [Docs](https://developers.google.com/accounts/docs/OAuth2WebServer))
   * Facebook Connect (via FB SDK) ([Dev Site](https://developers.facebook.com/) | [Docs](https://developers.facebook.com/docs/))
